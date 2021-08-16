@@ -5,10 +5,6 @@ var text =
   "كل عام وأنت بخير نفيسة أتمنی لك حياة سعيدة مليئة بالفرح والسعادة عقبال المئة سنة إنشاء الله.❤️❤️❤️";
 (speed = 50), (i = 0);
 
-window.onload = function () {
-  confetti.start();
-  document.getElementById("happy").play();
-};
 mybotton.onclick = function () {
   document.querySelector(".menu").style.height = "100%";
 };
@@ -29,4 +25,9 @@ function witter() {
     i++;
     setTimeout(witter, speed);
   }
+}
+function doit() {
+  confetti.start();
+  document.getElementById("happy").play();
+  document.getElementById("do").style.display = "none";
 }
