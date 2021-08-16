@@ -1,0 +1,467 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.container {
+  padding: 0px 15px;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-between;
+}
+
+.container .happy {
+  margin: 5px auto;
+  width: 590px;
+  padding: 0px 20px 60px;
+  display: block;
+  margin-top: 2vh;
+  margin-bottom: 19vh;
+}
+
+.cake {
+  transform: translateY(20px);
+  margin-bottom: -130px;
+  position: relative;
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -o-transform: translateY(20px);
+}
+.plate {
+  z-index: 1;
+  width: 270px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 #b3b3b3, 0 5px 40px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.layer {
+  z-index: 2;
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #553c13;
+  box-shadow: 0 2px 0px #6a4b18, 0 4px 0px #33240b, 0 6px 0px #32230b,
+    0 8px 0px #31230b, 0 10px 0px #30220b, 0 12px 0px #2f220b,
+    0 14px 0px #2f210a, 0 16px 0px #2e200a, 0 18px 0px #2d200a,
+    0 20px 0px #2c1f0a, 0 22px 0px #2b1f0a, 0 24px 0px #2a1e09,
+    0 26px 0px #2a1d09, 0 28px 0px #291d09, 0 30px 0px #281c09;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.layer.one {
+  top: -30px;
+  left: 10px;
+}
+.layer.two {
+  top: -62px;
+  left: 10px;
+}
+.layer.three {
+  top: -94px;
+  left: 10px;
+}
+.icing {
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  background-color: #ff75a3fa;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  top: -94px;
+  left: 10px;
+  z-index: 4;
+  box-shadow: 0 3px #f8bbd0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.decotion {
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  background-image: url(img/img2.png);
+  background-size: cover;
+  top: -94px;
+  left: 10px;
+  z-index: 9;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.drip {
+  width: 250px;
+  position: absolute;
+  top: -37px;
+  left: 10px;
+  z-index: 3;
+}
+.fruit {
+  position: absolute;
+  width: 30px;
+  left: 32px;
+  top: -64px;
+  z-index: 20;
+}
+
+.name {
+  font-family: "Kaushan Script", cursive;
+  position: absolute;
+  z-index: 10;
+  top: -10px;
+  font-size: 35px;
+  color: #58392d;
+  transform: rotateX(30deg);
+  -webkit-transform: rotateX(30deg);
+  -moz-transform: rotateX(30deg);
+  -ms-transform: rotateX(30deg);
+  -o-transform: rotateX(30deg);
+  text-align: center;
+}
+.name span {
+  display: inline-block;
+  width: 250px;
+  font-size: 23px;
+}
+.candle-all {
+  position: absolute;
+  top: -229px;
+  left: 72px;
+  display: flex;
+  z-index: 15;
+}
+.candle-all .candle {
+  position: relative;
+  font-size: 130px;
+  font-family: "Londrina Solid", cursive;
+  color: white;
+  -webkit-text-stroke: 3px #f9578e;
+}
+.candle-all .candle::before {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 10px;
+  background-color: white;
+  bottom: 0;
+  left: calc(50% - 10px);
+  z-index: -1;
+  border-radius: 0 0 25px 25px;
+  -webkit-border-radius: 0 0 25px 25px;
+  -moz-border-radius: 0 0 25px 25px;
+  -ms-border-radius: 0 0 25px 25px;
+  -o-border-radius: 0 0 25px 25px;
+}
+.candle-all .candle::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  background-color: black;
+  top: 25px;
+  left: 30px;
+  z-index: -1;
+}
+.flame {
+  position: absolute;
+  background-color: orange;
+  width: 15px;
+  height: 35px;
+  border-radius: 10px 10px 10px 10px/25px 25px 10px 10px;
+  top: -8px;
+  left: 48%;
+  margin-left: -7.5px;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5),
+    0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  transform-origin: 50% 90%;
+  animation: flicker 1s ease-in-out alternate infinite;
+}
+
+.container .button {
+  position: absolute;
+  padding: 20px;
+  cursor: pointer;
+  left: calc(50% - 55px);
+  font-weight: bold;
+  color: white;
+  background: #f9578e;
+  border: none;
+  margin-top: 20px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  box-shadow: 0px 4px #bdbdbd;
+  transition: box-shadow 100ms;
+  -webkit-transition: box-shadow 100ms;
+  -moz-transition: box-shadow 100ms;
+  -ms-transition: box-shadow 100ms;
+  -o-transition: box-shadow 100ms;
+}
+.container .button:active {
+  box-shadow: none;
+}
+@keyframes flicker {
+  0% {
+    transform: skewX(5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.2), 0 0 20px rgba(255, 165, 0, 0.2),
+      0 0 60px rgba(255, 165, 0, 0.2), 0 0 80px rgba(255, 165, 0, 0.2);
+  }
+  25% {
+    transform: skewX(-5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5),
+      0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  }
+  50% {
+    transform: skewX(10deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.3),
+      0 0 60px rgba(255, 165, 0, 0.3), 0 0 80px rgba(255, 165, 0, 0.3);
+  }
+  75% {
+    transform: skewX(-10deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.4), 0 0 20px rgba(255, 165, 0, 0.4),
+      0 0 60px rgba(255, 165, 0, 0.4), 0 0 80px rgba(255, 165, 0, 0.4);
+  }
+  100% {
+    transform: skewX(5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5),
+      0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  }
+}
+
+.menu {
+  width: 100%;
+  height: 0%;
+  background-color: #333;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 2000px;
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.menu .carte {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  background-color: wheat;
+  z-index: -1;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+.menu .carte .page1 {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s linear;
+  -webkit-transition: transform 1s linear;
+  -moz-transition: transform 1s linear;
+  -ms-transition: transform 1s linear;
+  -o-transition: transform 1s linear;
+  transform-origin: left center;
+}
+.rotate {
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+}
+.move {
+  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+}
+.menu .carte .page1 .face {
+  position: absolute;
+  z-index: 2;
+  font-family: "Ultra", serif;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/img5.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+}
+.menu .carte .page1 .face div {
+  font-size: 30px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+  line-height: 2;
+  -webkit-text-stroke: 2px #c2185b;
+  text-shadow: -1px 5px 0px #c2185b;
+}
+.menu .carte .page1 .back {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+
+  background-color: #f6f6f6;
+  -webkit-backface-visibility: hidden;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(img/img7.jpg);
+  background-size: 100%;
+}
+.menu .carte .page1 .back .border {
+  background-color: #9db8b6;
+  width: 93%;
+  height: 96%;
+  padding: 20px;
+  background-size: 100% 100%;
+}
+.menu .carte .page2 {
+  background-color: #f6f6f6;
+  background-image: url(img/img7.jpg);
+  background-size: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu .carte .page2 .message {
+  background-color: white;
+  text-align: center;
+  margin: auto 10px;
+  min-height: 200px;
+  min-width: 100%;
+  padding: 20px;
+  font-family: "Jomhuria", cursive;
+}
+.menu .carte .page2 .message p {
+  direction: rtl;
+  line-height: 2;
+  font-size: 24px;
+
+  color: #616161;
+}
+.menu .carte .page1 .back img {
+  width: 100%;
+  height: 100%;
+  background-color: #944c4c;
+}
+.menu .close {
+  font-size: 50px;
+  color: white;
+  position: fixed;
+  z-index: 3;
+  right: 1%;
+  top: 1%;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (max-width: 767px) {
+  .cake {
+    zoom: 75%;
+  }
+  .container .happy {
+    zoom: 75%;
+  }
+}
+@media (max-width: 470px) {
+  .cake {
+    zoom: 100%;
+    margin-top: 16vh;
+  }
+  .container .happy {
+    display: block;
+    zoom: 50%;
+  }
+}
+@media (max-width: 720px) {
+  .menu .carte .page1 {
+    transform-origin: top center;
+  }
+  .rotate {
+    transform: rotateX(-180deg);
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+    -o-transform: rotateX(-180deg);
+  }
+  .move {
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+  }
+  .menu .carte {
+    zoom: 70%;
+  }
+  .menu .close {
+    font-size: 50px;
+  }
+  .menu .carte .page1 .back .border img {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    color: dodgerblue;
+  }
+}
